@@ -2,6 +2,11 @@
   "name": "my-redux-clone",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "OMAR ISMAIL",
+    "email": "Omar.nepa@gmail.com"
+  },
+  "description": "This a self made redux library for storing the state in the react projects.It does not have the validations applied yet ",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.3.0",

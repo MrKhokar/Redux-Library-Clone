@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import store from "./Redux/CustomStore";
+import * as actions from "./Redux/Actions";
 
+store.subscrition(() => console.log("State Changes"));
+store.dispatch(actions.dataAdded("This is the 1st Entry"));
+store.dispatch(actions.dataAdded("This is the 2nd Entry"));
+store.dispatch(actions.dataAdded("This is the 3rd Entry"));
+console.log(store.getState(), "store updated with data");
+
+store.dispatch(actions.dataResolved(2));
+console.log(store.getState(), "resolved data");
+
+store.dispatch(actions.dataDelete(1));
+console.log(store.getState(), "delete");
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1 style={{ textAlign: "center" }}>Redux Clone</h1>
     </div>
   );
 }
